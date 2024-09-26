@@ -96,6 +96,9 @@
         <!--input vol dir entrada d'informació per part de l'usuari que pot ser de molts tipus, en aquet cas és un número, però podia ser un input type text, date o button que serian  que respectivament que nomes accepta que escrivim text una data o un boto respectivament, més exemples aqui: https://www.w3schools.com/html/html_form_input_types.asp--> 
         <!--id significa identificador i és com un DNI, no es pot repetir en la mateixa pàgina i ens ajuda a manipular-lo amb Javaescript getElemetayById, value significa valor per defecte que sortirà directament, step és la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb 2 decimal que hauries d'escriure?
             hauria d'escriure step="0.01"-->
+        <!-- Id ens sereix per identificar qualsevol element HTML i no es poden resptir en la mateix< pàgia, a vegades necesiten fer serrvir "class" perque necesitem fer servir "class" perque volem repetirr les caracteristiques d'aquesta clasediverses vegades a la pàgina.
+        Quan esccric  en HTML "id" i vull agafar-ho des de Javascript escric "getElementById" i quan escric en HTML "class" i vull agafar-ho amb Javascript esccric "getElementByClassName". Si ho vull agafar en CSS, es a dir que vull fer amb ell es donar-li un estil simplement he de posar en CSS, es a dir que el que vull fer amb ell es donar-li un estil simplementhe de posar en CSS si poso # seguit  del nom de la clase seleccionare aquesta clase i si escric seguit del nom de la id seleccionare la id.
+        En CSS s'ha de descriure sempre {propietat:valor11; propietat2:valor2} i davant del primer claudator he d'escriure .nomdelaid o #nomdelaclasse-->
         <!--br significa "break" que ddeixa una linia en blanc  darrera, com hi ha 2 br hi hauran 2 línies en blanc-->
         <label>for="a2"> Longitud del segon braç (a2):</label>
         <input type="number" id="a2" value="1.5" step="0.1"> <br><br>
@@ -115,6 +118,26 @@
     <!-- Un canvas és una zona on normalment hi haura un grafic pero també pot haberhi un dibuix, en el nostre cas hi haura un grafic que representara en el nostre cas els 2 braços del robot en aquet cas quedarà un requadre de 400x400 buit fins que apreti calcula la pocició-->
     <scrpt>
         <!-- script vol dir que convio totalment de llenguatge de programació i deixem d'escriure HTML que té els simbols <> i que serveixen per fer estructures estatiques que no es mouen ni són interactives amb llenguatge Javascript-->
+        function calculatePosition() {
+        //agafar les dades introduides perl'usuari
+        let a1 = parseFloat (document.getElementById("a1")value); //longitud primer braç
+        let a2 = parseFloat (document.getElementById("a2")value); //longitud segon braç
+        let q1_deg = parseFloat (document.getElementById("a1")value); //angle en graus del primer braç
+        let q2_deg = parseFloat (document.getElementById("a1")value); //angle en graus del segon braç
+        /* let ens permet crear variables locals perque estan dintre de una funció en quet cas (seria variabl global si estiguesi a principi del codi i afectes a tot el codi) que emmagatzzena els valors introduits per l'usuari perque a banda de fer getElementtById aplico el metode .value per asegurarme que agaafo el valo escrit i aplico la funció parseFloat per convertir el valor del l'usuari en un numero decimal o Floatng point number en anglès (si hages parseInt el convertiria en nombres enters).
+        En aquet tros de codi de la linia 123 a la 127 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva posició en la funció de les 4 dades incluides per l'usuari*/
+
+        //convertir graus a radiants per als calculs trigonometrics
+        let q1=q1_deg * Math.PI / 180;
+        let q1=q1_deg * Math.PI / 180;
+        //aixó es lo mateix que 2PI/360
+
+        //mostrar les fórmules per calcular la pocició del robot
+        let output += "<div class='equation'>  les equacions per calcular le pocició final del robor son:</div>";
+        output += "<div class='equation'>\\[ x = a_1 \\ cos(q_1) + a_2 \\cos(q_1 + q_2) \\J </div>";
+        output += "<div class='equation'>\\[ x = a_1 \\ sin(q_1) + a_2 \\sin(q_1 + q_2) \\J </div>";
+        /* Estic creant una variable anomenada output en Javascript que conte un element <div> o divisor HTML dintre del qual hi han equacions del robott en llenguatge Javascript de la bibliotece (library) mathJax3 que permet veure formules matematiques en una web.
+            mathJax3 utilitza  \\ per avisar que comnça un  mathJax i te unes normes com que la _ indica subindex, si poso uns ªª devant de sinus o cosinus es veu escrit com a formula */
     </scrpt>
         
     <p>Em dic Carla i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
