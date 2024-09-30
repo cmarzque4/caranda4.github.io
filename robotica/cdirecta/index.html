@@ -8,31 +8,21 @@
     <style>body {
     padding: 0; /* Elimina l'espai extra al voltant del cos */
 }
-
 .container-fluid {
     max-width: 100%; /* Assegura que la navbar ocupa tota l'amplada */
 }
-
-    
     .navbar {
     padding-left: 0; /* Elimina el padding esquerra de la navbar */
 }
-
 .logo {
     margin-right: 20px; /* Ajustar el marge si vols separar el logo del text */
     margin-left: 0; /* Assegurar que no hi hagi marge a l'esquerra */
 }
-
-    
-
 .navbar-brand {
     display: flex;
     align-items: center;
 }
-
-
 }
-
 .brand-text {
     white-space: nowrap; /* Això assegura que el text no es trenqui en múltiples línies */
     font-size: 1.25rem; /* Ajusta la mida de la font si és necessari */
@@ -45,7 +35,6 @@
     </style>
 </head>
 <body>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -53,7 +42,6 @@
     <img src="logo.png" alt="Logo" width="50" class="logo">
     <span class="brand-text">Web d'alumne</span>
 </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,57 +74,67 @@
 <!-- Contingut principal -->
 <div class="content-container">
     <h1>Càlcul  de la posició d'un robot amb dos braços</h1>
-    <!-- h1 vol dir títol gran del anglés heading one i es a més pertit amb h2 i fins h6 que es el més petit possible-->
+            <!-- h1 vol dir títol gran del anglés heading one i es el més gran amb h2 i fins h6 que es el més petit possible-->
     <div> 
-        <!-- div es un divisor i conte en aquet cas unes quantes instrucions html que severixen per introduir totes les dades que vulgui l'usari-->
+             <!-- div es un divisor i conté en aquet cas unes quantes instrucions HTML que severixen per introduir totes les dades que vulgui l'usari-->
         <!-- etiquetes i camp d'entrades per a les dades del robot-->
         <label>for="a1"> Longitud del primer braç (a1):</label>
-        <!--label és una etiqueta que ens ajuda a identidifar un text però no es un identificador-->
+            <!--label és una etiqueta que ens ajuda a identificar un text però no es un identificador-->
         <input type="number" id="a1" value="2" step="0.1"> <br><br>
-        <!--input vol dir entrada d'informació per part de l'usuari que pot ser de molts tipus, en aquet cas és un número, però podia ser un input type text, date o button que serian  que respectivament que nomes accepta que escrivim text una data o un boto respectivament, més exemples aqui: https://www.w3schools.com/html/html_form_input_types.asp--> 
-        <!--id significa identificador i és com un DNI, no es pot repetir en la mateixa pàgina i ens ajuda a manipular-lo amb Javaescript getElemetayById, value significa valor per defecte que sortirà directament, step és la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb 2 decimal que hauries d'escriure?
-            hauria d'escriure step="0.01"-->
-        <!-- Id ens sereix per identificar qualsevol element HTML i no es poden resptir en la mateix< pàgia, a vegades necesiten fer serrvir "class" perque necesitem fer servir "class" perque volem repetirr les caracteristiques d'aquesta clasediverses vegades a la pàgina.
-        Quan esccric  en HTML "id" i vull agafar-ho des de Javascript escric "getElementById" i quan escric en HTML "class" i vull agafar-ho amb Javascript esccric "getElementByClassName". Si ho vull agafar en CSS, es a dir que vull fer amb ell es donar-li un estil simplement he de posar en CSS, es a dir que el que vull fer amb ell es donar-li un estil simplementhe de posar en CSS si poso # seguit  del nom de la clase seleccionare aquesta clase i si escric seguit del nom de la id seleccionare la id.
-        En CSS s'ha de descriure sempre {propietat:valor11; propietat2:valor2} i davant del primer claudator he d'escriure .nomdelaid o #nomdelaclasse-->
-        <!--br significa "break" que ddeixa una linia en blanc  darrera, com hi ha 2 br hi hauran 2 línies en blanc-->
+            <!--input vol dir entrada d'informació per part de l'usuari que pot ser de molts tipus, en aquet cas és un número, però podia ser un input type text, date o button que serian  que respectivament que nomes accepta que escrivim text, una data o un boto respectivament, més exemples aqui: https://www.w3schools.com/html/html_form_input_types.asp--> 
+            <!--id significa identificador i és com un DNI, no es pot repetir en la mateixa pàgina i ens ajuda a manipular-lo amb Javaescript getElemetayById-->
+           
+            <!--value significa valor per defecte que sortirà directament-->
+            <!--step és la variabilitat que jo puc escriure, no puc escriure 4,32, si vulgues escriure 4,32 amb 2 decimal que hauries d'escriure? Hauria d'escriure step="0.01"-->
+            <!-- Id ens sereix per identificar qualsevol element HTML i no es poden repetir en la mateixa pàgina
+                 Quan escric en HTML "id" i vull agafar-ho des de Javascript escric "getElementById"
+                 Si ho vull agafar en CSS, es a dir que el que vull fer amb ell es donar-li un estil simplement he de posar en CSS, si escric # seguit del nom de la id seleccionare la id.
+                 En CSS s'ha de descriure sempre {propietat:valor1; propietat2:valor2} i davant del primer claudator he d'escriure #nomdelaid-->
+            <!--"class" perque volem repetir les caracteristiques d'aquesta clase diverses vegades a la pàgina.
+                 Quan escric en HTML "class" i vull agafar-ho amb Javascript escric "getElementByClassName".
+                 Si ho vull agafar en CSS, es a dir que el que vull fer amb ell es donar-li un estil simplement he de posar en CSS, si poso . seguit del nom de la clase seleccionare aquesta clase.
+                 En CSS s'ha de descriure sempre {propietat:valor1; propietat2:valor2} i davant del primer claudator he d'escriure o .nomdelaclasse-->
+            <!--br significa "break" que deixa una linia en blanc  darrera, com hi ha 2 br hi hauran 2 línies en blanc-->
+       
+        
         <label>for="a2"> Longitud del segon braç (a2):</label>
         <input type="number" id="a2" value="1.5" step="0.1"> <br><br>
         <label>for="q1"> Longitud del primer braç (q1, en graus):</label>
         <input type="number" id="q1" value="45" step="0.1"> <br><br>
         <label>for="q2"> Longitud del segon braç (q2, en graus):</label>
         <input type="number" id="q2" value="30" step="0.1"> <br><br>
-        <!-- finns aqui els camps d'entrada de dades de l'usuari per fer el problema-->
+        <!-- fins aqui els camps d'entrada de dades de l'usuari per fer el problema-->
+        <!-- tots els inputs son com caixes blanques d'entrada d'informació-->
         <button onclick="caculatePosition()">Calcula la posició</button>
-        <!-- calcula la pocició te foma de boto i cuan el cliquem s'executa una funció Javaescript anomeada calculatedPosition() que te els parentesis buits perque no depen de cap parametre o argumet. button és un tag principal co label, p peer paragraf, imput per entrada i el que te al costat son tos els tacs principals són atributs com aquet cas oncliks-->
-        <!-- En comptes de fer un click al botó puc fer ondblclick que obligaria al usuari a fer dos clics  o puc fer onmouseover el botó s'activa quan paso per sobre amb el ratolí puc fer qe canvii de color o una explicació del que fa el botó o tooltip-->
-        <!-- tots els imputs son com caixes blanques d'entrada d'informació-->
+        <!--calcula la posició té forma de botó i quan el cliquem s'executa una funció Javascript anomenada calculatedPosition() que té els parentesis buits perqué no depen de cap parametreo argument.-->
+            <!--Button és un tag principal com label-->
+            <!--p per paràgraf-->
+            <!--el que té al costat de tots els tags principals són atributs com en aquest cas onclick-->
+            <!--en comptes de fer un clic al botó puc fer ondblclick que obligaria a l'usuari a fer 2 clics o puc fer onmouseover el botó s'activa quan paso per sobre amb el ratolí i puc fer que canvii de color o una explicació de lo que fa el botó o tooltip o informació del que fa el botó-->
     </div><!-- aquet es el divisor que conte la entrada de dades de l'usuari i el botó calcula la pocició-->
     <div id="ouput"></div>
-    <!-- l'anterior és un divisor buit que es una part de la pantalla que ara està buida, però te un nom, output, anomeat així perqé serà on estaran tots els calculs quan apreten el botó calcula pocició-->
+            <!-- l'anterior és un divisor buit que es una part de la pantalla que ara està buida, però te un nom, output, anomeat així perqé serà on estaran tots els calculs quan apreten el botó calcula pocició-->
     <canvas id="robotCanvas" width="400" height="400"></canvas>
-    <!-- Un canvas és una zona on normalment hi haura un grafic pero també pot haberhi un dibuix, en el nostre cas hi haura un grafic que representara en el nostre cas els 2 braços del robot en aquet cas quedarà un requadre de 400x400 buit fins que apreti calcula la pocició-->
+            <!-- Un canvas és una zona on normalment hi haura un grafic pero també pot haberhi un dibuix, en el nostre cas hi haura un grafic que representara en el nostre cas els 2 braços del robot en aquet cas quedarà un requadre de 400x400 buit fins que apreti calcula la pocició-->
     <scrpt>
-        <!-- script vol dir que convio totalment de llenguatge de programació i deixem d'escriure HTML que té els simbols <> i que serveixen per fer estructures estatiques que no es mouen ni són interactives amb llenguatge Javascript-->
+            <!-- script vol dir que convio totalment de llenguatge de programació i deixem d'escriure HTML que té els simbols <> i que serveixen per fer estructures estatiques que no es mouen ni són interactives amb llenguatge Javascript-->
         function calculatePosition() {
         //agafar les dades introduides perl'usuari
         let a1 = parseFloat (document.getElementById("a1")value); //longitud primer braç
         let a2 = parseFloat (document.getElementById("a2")value); //longitud segon braç
         let q1_deg = parseFloat (document.getElementById("a1")value); //angle en graus del primer braç
         let q2_deg = parseFloat (document.getElementById("a1")value); //angle en graus del segon braç
-        /* let ens permet crear variables locals perque estan dintre de una funció en quet cas (seria variabl global si estiguesi a principi del codi i afectes a tot el codi) que emmagatzzena els valors introduits per l'usuari perque a banda de fer getElementtById aplico el metode .value per asegurarme que agaafo el valo escrit i aplico la funció parseFloat per convertir el valor del l'usuari en un numero decimal o Floatng point number en anglès (si hages parseInt el convertiria en nombres enters).
-        En aquet tros de codi de la linia 123 a la 127 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva posició en la funció de les 4 dades incluides per l'usuari*/
-
+            /* let ens permet crear variables locals perque estan dintre de una funció en quet cas (seria variabl global si estiguesi a principi del codi i afectes a tot el codi) que emmagatzzena els valors introduits per l'usuari perque a banda de fer getElementtById aplico el metode .value per asegurarme que agaafo el valo escrit i aplico la funció parseFloat per convertir el valor del l'usuari en un numero decimal o Floatng point number en anglès (si hages parseInt el convertiria en nombres enters).
+            En aquet tros de codi de la linia 123 a la 127 hem aconseguit guardar les 4 dades geometriques del nostre robot per fer calculs de la seva posició en la funció de les 4 dades incluides per l'usuari*/
         //convertir graus a radiants per als calculs trigonometrics
         let q1=q1_deg * Math.PI / 180;
         let q1=q1_deg * Math.PI / 180;
         //aixó es lo mateix que 2PI/360
-
         //mostrar les fórmules per calcular la pocició del robot
         let output += "<div class='equation'>  les equacions per calcular le pocició final del robor son:</div>";
         output += "<div class='equation'>\\[ x = a_1 \\ cos(q_1) + a_2 \\cos(q_1 + q_2) \\J </div>";
         output += "<div class='equation'>\\[ x = a_1 \\ sin(q_1) + a_2 \\sin(q_1 + q_2) \\J </div>";
-        /* Estic creant una variable anomenada output en Javascript que conte un element <div> o divisor HTML dintre del qual hi han equacions del robott en llenguatge Javascript de la bibliotece (library) mathJax3 que permet veure formules matematiques en una web.
+        /* Estic creant una variable anomenada output en Javascript que conte un element <div> o divisor HTML dintre del qual hi han equacions del robot en llenguatge Javascript de la bibliotece (library) mathJax3 que permet veure formules matematiques en una web.
             mathJax3 utilitza  \\ per avisar que comnça un  mathJax i te unes normes com que la _ indica subindex, si poso uns ªª devant de sinus o cosinus es veu escrit com a formula */
         //Substituir les variables en les equacions
         output += "<div class='equation'>  Substituint els valors:</div>";
