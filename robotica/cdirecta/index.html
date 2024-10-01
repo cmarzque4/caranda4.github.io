@@ -100,10 +100,10 @@
         let y1 = a1 * Math.sin(q1); // Posició en Y del primer braç
         let y2 = a2 * Math.sin(q1 + q2); // Posició en Y del segon braç
         output += "<div class='equation'>Desglossant els càlculs:</div>";
-        output += `<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) = ${a2} \\times \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) = ${a2} \\times \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_1 = a_1 \\cdot \\cos(q_1) = ${a1} \\cdot \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_2 = a_2 \\cdot \\cos(q_1 + q_2) = ${a2} \\cdot \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_1 = a_1 \\cdot \\sin(q_1) = ${a1} \\cdot \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_2 = a_2 \\cdot \\sin(q_1 + q_2) = ${a2} \\cdot \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
         // Càlcul de les coordenades finals (x,y) de la mà del robot  
         let x = x1 + x2;
         let y = y1 + y2;
@@ -120,7 +120,7 @@
             "id" haurien de ser 1, i son classes*/
         // Mostrar el resultat
         document.getElementById('output').innerHTML = output;
-        MathJax.typeset();}  // Renderitzar MathJax per mostrar les fórmules correctament
+        MathJax.typeset();  // Renderitzar MathJax per mostrar les fórmules correctament
     </script>
     <p>Em dic Carla i sóc alumne del curs 2024-2025 de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
