@@ -148,16 +148,16 @@
         let y1 = a1 * Math.sin(q1); // Posició en Y del primer braç
         let y2 = a2 * Math.sin(q1 + q2); // Posició en Y del segon braç
         output += "<div class='equation'>Desglossant els càlculs:</div>";
-            output += `<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
-            output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) = ${a2} \\times \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
-            output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
-            output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) = ${a2} \\times \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) = ${a2} \\times \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) = ${a2} \\times \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
         // Càlcul de les coordenades finals (x,y) de la mà del robot  
         let x = x1 + x2;
         let y = y1 + y2;
         output += "<div class='equation'> Calculant els resultats numèrics totals: </div>";
-        output += `<div class='equation'>\\[ x = ${x.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ y = ${y.toFixed(2)} \\]</div>`;
+        output += "<div class='equation'>\\[ x = ${x.toFixed(2)} \\]</div>";
+        output += "<div class='equation'>\\[ y = ${y.toFixed(2)} \\]</div>";
         /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i la lletra y
             que corresponen a la posició final del robot. let x = x1 + x2; emmagatzema el valor de la posició x 
             final en x i el $ seleciona el valor x i el posa 2 decimals arrodonots amb .toFixed i els \\[
