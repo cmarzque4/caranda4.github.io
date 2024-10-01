@@ -86,8 +86,8 @@
         //aixó es lo mateix que 2PI/360
         //mostrar les fórmules per calcular la pocició del robot
         let output = "<div class='equation'>  les equacions per calcular le pocició final del robor son:</div>";
-        output += `<div class='equation'>\\[ x = a_1 \\ cos(q_1) + a_2 \\cos(q_1 + q_2) \\] </div>`;
-        output += `<div class='equation'>\\[ x = a_1 \\ sin(q_1) + a_2 \\sin(q_1 + q_2) \\] </div>`;
+        output += "<div class='equation'>\\[ x = a_1 \\ cos(q_1) + a_2 \\cos(q_1 + q_2) \\] </div>";
+        output += "<div class='equation'>\\[ x = a_1 \\ sin(q_1) + a_2 \\sin(q_1 + q_2) \\] </div>";
         /* Estic creant una variable anomenada output en Javascript que conte un element <div> o divisor HTML dintre del qual hi han equacions del robot en llenguatge Javascript de la bibliotece (library) mathJax3 que permet veure formules matematiques en una web.
             mathJax3 utilitza  \\ per avisar que comnça un  mathJax i te unes normes com que la _ indica subindex, si poso uns ªª devant de sinus o cosinus es veu escrit com a formula */
         //Substituir les variables en les equacions
@@ -100,16 +100,16 @@
         let y1 = a1 * Math.sin(q1); // Posició en Y del primer braç
         let y2 = a2 * Math.sin(q1 + q2); // Posició en Y del segon braç
         output += "<div class='equation'>Desglossant els càlculs:</div>";
-        output += `<div class='equation'>\\[ x_1 = a_1 \\cdot \\cos(q_1) = ${a1} \\cdot \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ x_2 = a_2 \\cdot \\cos(q_1 + q_2) = ${a2} \\cdot \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ y_1 = a_1 \\cdot \\sin(q_1) = ${a1} \\cdot \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ y_2 = a_2 \\cdot \\sin(q_1 + q_2) = ${a2} \\cdot \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_1 = a_1 \\cos(q_1) = ${a1} \\times \\cos(${q1_deg}°) = ${x1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ x_2 = a_2 \\cos(q_1 + q_2) = ${a2} \\times \\cos(${q1_deg}° + ${q2_deg}°) = ${x2.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_1 = a_1 \\sin(q_1) = ${a1} \\times \\sin(${q1_deg}°) = ${y1.toFixed(2)} \\]</div>`;
+        output += `<div class='equation'>\\[ y_2 = a_2 \\sin(q_1 + q_2) = ${a2} \\times \\sin(${q1_deg}° + ${q2_deg}°) = ${y2.toFixed(2)} \\]</div>`;
         // Càlcul de les coordenades finals (x,y) de la mà del robot  
         let x = x1 + x2;
         let y = y1 + y2;
         output += "<div class='equation'> Calculant els resultats numèrics totals: </div>";
-        output += `<div class='equation'>\\[ x = ${x.toFixed(2)} \\]</div>`;
-        output += `<div class='equation'>\\[ x = ${x.toFixed(2)} \\]</div>`;
+        output += "<div class='equation'>\\[ x = ${x.toFixed(2)} \\]</div>";
+        output += "<div class='equation'>\\[ y = ${y.toFixed(2)} \\]</div>";
         /* .toFixed(2) és un metode d'arrodoniment que apliquem amb la sintaxi del punt a la lletra x i la lletra y
             que corresponen a la posició final del robot. let x = x1 + x2; emmagatzema el valor de la posició x 
             final en x i el $ seleciona el valor x i el posa 2 decimals arrodonots amb .toFixed i els \\[
