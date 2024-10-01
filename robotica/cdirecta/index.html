@@ -92,8 +92,8 @@
             mathJax3 utilitza  \\ per avisar que comnça un  mathJax i te unes normes com que la _ indica subindex, si poso uns ªª devant de sinus o cosinus es veu escrit com a formula */
         //Substituir les variables en les equacions
         output += "<div class='equation'>  Substituint els valors:</div>";
-        output += `<div class='equation'>\\[ x = ${a1} \\ cos(${q1_deg}°) + ${a2} \\cos($(q1_deg)° + $(q2_deg)°) \\] </div>`;
-        output += `<div class='equation'>\\[ y = ${a1} \\ sin(${q1_deg}°) + ${a2} \\sin($(q1_deg)° + $(q2_deg)°) \\] </div>`;
+        output += `<div class='equation'>\\[ x = ${a1} \\cdot \\cos(${q1_deg}°) + ${a2} \\cdot \\cos(${q1_deg}° + ${q2_deg}°) \\]</div>`;
+        output += `<div class='equation'>\\[ y = ${a1} \\cdot \\sin(${q1_deg}°) + ${a2} \\cdot \\sin(${q1_deg}° + ${q2_deg}°) \\]</div>`;
         // Càlculs numèrics detallats
         let x1 = a1 * Math.cos(q1); // Posició en X del primer braç
         let x2 = a2 * Math.cos(q1 + q2); // Posició en X del segon braç
